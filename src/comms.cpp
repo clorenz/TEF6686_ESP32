@@ -525,6 +525,10 @@ void XDRGTKRoutine() {
         }
         DataPrint("K" + String(scanhold) + "\n");
         break;
+      case 'L':
+        radio.tone(50, -5, 1000);
+        radio.tone(50, -5, 2000);
+        break;  
 
       case 'M':
         byte XDRband;
