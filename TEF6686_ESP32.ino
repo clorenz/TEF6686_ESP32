@@ -287,6 +287,7 @@ int8_t LevelOffset;
 int8_t LowLevelSet;
 int8_t CN;
 int8_t CNold;
+int8_t SNR;
 int8_t VolSet;
 float batteryVold;
 IPAddress remoteip;
@@ -3083,6 +3084,7 @@ void ShowSignalLevel() {
 
     smeter = int16_t(sval);
     SStatus = SAvg / 10;
+    SNR = CN;
     CN = SAvg2 / 10;
 
     if (!menu) analogWrite(SMETERPIN, smeter);
